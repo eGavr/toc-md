@@ -1,0 +1,49 @@
+{
+  "name": "md-toc",
+  "version": "0.0.0",
+  "description": "Generates a markdown TOC (table of contents)",
+  "keywords": [
+    "readme",
+    "markdown",
+    "toc",
+    "table of contents"
+  ],
+  "author": {
+    "name": "Evgeniy Gavryushin",
+    "email": "job.egavr@yandex.ru",
+    "url": "https://github.com/eGavr"
+  },
+  "homepage": "https://github.com/eGavr/md-toc",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eGavr/md-toc.git"
+  },
+  "bugs": "https://github.com/eGavr/md-toc/issues",
+  "main": "./lib/index.js",
+  "dependencies": {
+    "marked": "0.3.2"
+  },
+  "devDependencies": {
+    "mocha": "1.18.2",
+    "must": "0.11.0",
+    "istanbul": "0.3.0",
+    "jshint": "2.5.3",
+    "jscs": "1.5.9"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run func-test && npm run cover",
+    "lint": "jshint . && jscs -c .jscs.js .",
+    "funct-test": "mocha test/toc",
+    "cover": "istanbul cover _mocha -- test/toc"
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/egavr/md-toc/blob/master/LICENSE"
+    }
+  ]
+}
