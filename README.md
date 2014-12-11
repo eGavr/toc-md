@@ -1,4 +1,4 @@
-# md-toc [![Build Status](https://travis-ci.org/eGavr/md-toc.svg)](https://travis-ci.org/eGavr/md-toc) [![Coverage Status](https://img.shields.io/coveralls/eGavr/md-toc.svg)](https://coveralls.io/r/eGavr/md-toc?branch=master) [![Dependency Status](https://david-dm.org/eGavr/md-toc.svg)](https://david-dm.org/eGavr/md-toc) [![devDependency Status](https://david-dm.org/eGavr/md-toc/dev-status.svg)](https://david-dm.org/eGavr/md-toc#info=devDependencies)
+# toc-md [![Build Status](https://travis-ci.org/eGavr/toc-md.svg)](https://travis-ci.org/eGavr/toc-md) [![Coverage Status](https://img.shields.io/coveralls/eGavr/toc-md.svg)](https://coveralls.io/r/eGavr/toc-md?branch=master) [![Dependency Status](https://david-dm.org/eGavr/toc-md.svg)](https://david-dm.org/eGavr/toc-md) [![devDependency Status](https://david-dm.org/eGavr/toc-md/dev-status.svg)](https://david-dm.org/eGavr/toc-md#info=devDependencies)
 
 Generates a markdown TOC (table of contents).
 
@@ -18,7 +18,7 @@ The tool can be used for English and Russian languages.
 ## Install
 
 ```bash
-$ npm install md-toc
+$ npm install toc-md
 ```
 
 <a name="usage"></a>
@@ -33,7 +33,7 @@ A TOC will be generated exactly on this place for the following headers.
 
 ```js
 var fs = require('fs'),
-    toc = require('md-toc');
+    toc = require('toc-md');
 
 var source = fs.readFileSync('markdown-without-toc.md', 'utf-8');
 
@@ -55,17 +55,17 @@ toc(source, options, function (err, res) {
 
 * **maxDepth: Number**
 
-Makes `md-toc` use headings whose depth is at most the specified value (default: `6`).
+Makes `toc-md` use headings whose depth is at most the specified value (default: `6`).
 
 <a name="cli"></a>
 ### CLI
 
 ```bash
-$ md-toc --help
+$ toc-md --help
 Generates a markdown TOC (table of contents)
 
 Usage:
-  md-toc [OPTIONS] [ARGS]
+  toc-md [OPTIONS] [ARGS]
 
 Options:
   -h, --help : Help
@@ -83,7 +83,7 @@ If argument `TARGET` is not specified, a TOC will be added to `SOURCE`.
 #### Example
 
 ```bash
-$ md-toc path/to/input/markdown path/to/output/markdown --max-depth=4
+$ toc-md path/to/input/markdown path/to/output/markdown --max-depth=4
 
-$ md-toc path/to/markdown -m 4
+$ toc-md path/to/markdown -m 4
 ```

@@ -1,4 +1,4 @@
-# md-toc [![Build Status](https://travis-ci.org/eGavr/md-toc.svg)](https://travis-ci.org/eGavr/md-toc) [![Coverage Status](https://img.shields.io/coveralls/eGavr/md-toc.svg)](https://coveralls.io/r/eGavr/md-toc?branch=master) [![Dependency Status](https://david-dm.org/eGavr/md-toc.svg)](https://david-dm.org/eGavr/md-toc) [![devDependency Status](https://david-dm.org/eGavr/md-toc/dev-status.svg)](https://david-dm.org/eGavr/md-toc#info=devDependencies)
+# toc-md [![Build Status](https://travis-ci.org/eGavr/toc-md.svg)](https://travis-ci.org/eGavr/toc-md) [![Coverage Status](https://img.shields.io/coveralls/eGavr/toc-md.svg)](https://coveralls.io/r/eGavr/toc-md?branch=master) [![Dependency Status](https://david-dm.org/eGavr/toc-md.svg)](https://david-dm.org/eGavr/toc-md) [![devDependency Status](https://david-dm.org/eGavr/toc-md/dev-status.svg)](https://david-dm.org/eGavr/toc-md#info=devDependencies)
 
 Создает оглавление для markdown-файлов.
 
@@ -18,7 +18,7 @@
 ## Установка
 
 ```bash
-$ npm install md-toc
+$ npm install toc-md
 ```
 
 <a name="использование"></a>
@@ -33,7 +33,7 @@ $ npm install md-toc
 
 ```js
 var fs = require('fs'),
-    toc = require('md-toc');
+    toc = require('toc-md');
 
 var source = fs.readFileSync('markdown-без-оглавления.md', 'utf-8');
 
@@ -55,17 +55,17 @@ toc(source, options, function (err, res) {
 
 * **maxDepth: Number**
 
-`md-toc` будет использовать заголовки, вложенность которых не больше указанного значения (по умолчанию: `6`).
+`toc-md` будет использовать заголовки, вложенность которых не больше указанного значения (по умолчанию: `6`).
 
 <a name="cli"></a>
 ### CLI
 
 ```bash
-$ md-toc --help
+$ toc-md --help
 Создает оглавление для markdown-файлов
 
 Использование:
-  md-toc [ОПЦИИ] [АРГУМЕНТЫ]
+  toc-md [ОПЦИИ] [АРГУМЕНТЫ]
 
 Опции:
   -h, --help : Помощь
@@ -83,7 +83,7 @@ Arguments:
 #### Пример
 
 ```bash
-$ md-toc путь/к/входному/markdown-файлу путь/к/выходному/markdown-файлу --max-depth=4
+$ toc-md путь/к/входному/markdown-файлу путь/к/выходному/markdown-файлу --max-depth=4
 
-$ md-toc путь/к/markdown-файлу -m 4
+$ toc-md путь/к/markdown-файлу -m 4
 ```

@@ -1,5 +1,5 @@
 {
-  "name": "md-toc",
+  "name": "toc-md",
   "version": "0.0.1-alpha",
   "description": "Generates a markdown TOC (table of contents)",
   "keywords": [

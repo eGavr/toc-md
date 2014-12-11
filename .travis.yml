@@ -5,7 +5,7 @@ node_js:
 
 env:
   global:
-    - GH_REF: github.com/eGavr/md-toc.git
+    - GH_REF: github.com/eGavr/toc-md.git
     - ISTANBUL_COVERAGE: true
 
 after_success:
