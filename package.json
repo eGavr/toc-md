@@ -20,9 +20,15 @@
   },
   "bugs": "https://github.com/eGavr/md-toc/issues",
   "main": "./lib/index.js",
+  "bin": {
+    "md-toc": "./bin/md-toc"
+  },
   "dependencies": {
     "marked": "0.3.2",
-    "lodash": "2.4.1"
+    "lodash": "2.4.1",
+    "coa": "0.4.1",
+    "vow-fs": "0.3.3",
+    "colors": "1.0.3"
   },
   "devDependencies": {
     "mocha": "1.18.2",
