@@ -50,19 +50,6 @@ describe('TOC generation', function () {
         });
     });
 
-    it('must work \'ignoreFirstHeader\' option', function (done) {
-        var files = readFiles('ignore-first-header');
-
-        toc(files.md, { ignoreFirstHeader: true }, function (err, res) {
-            if (err) {
-                done(err);
-            } else {
-                res.must.be.equal(files['md-toc']);
-                done();
-            }
-        });
-    });
-
     it('must work \'maxDepth\' option', function (done) {
         var files = readFiles('max-depth');
 
