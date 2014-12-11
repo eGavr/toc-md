@@ -1,6 +1,6 @@
 {
   "name": "md-toc",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha",
   "description": "Generates a markdown TOC (table of contents)",
   "keywords": [
     "readme",
