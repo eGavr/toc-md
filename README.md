@@ -2,7 +2,7 @@
 
 Generates a markdown TOC (table of contents).
 
-The tools can be used both for English and Russian languages.
+The tool can be used for English and Russian languages.
 
 ## Table of contents
 <!-- TOC -->
@@ -24,7 +24,8 @@ $ npm install md-toc
 <a name="usage"></a>
 ## Usage
 
-Wherever you want, add an HTML comment `<!-- TOC -->` to a markdown file.
+Add an HTML comment `<!-- TOC -->` to a markdown file.
+
 A TOC will be generated exactly on this place for the following headers.
 
 <a name="api"></a>
@@ -37,7 +38,6 @@ var fs = require('fs'),
 var source = fs.readFileSync('markdown-without-toc.md', 'utf-8');
 
 var options = {
-    ignoreFirstHeader: false,
     maxDepth: 6
 };
 
@@ -53,13 +53,9 @@ toc(source, options, function (err, res) {
 <a name="options"></a>
 #### Options
 
-* **ignoreFirstHeader: Boolean**
-
-Makes `md-toc` ignore the first header (default: `false`).
-
 * **maxDepth: Number**
 
-Sets the maximum depth of TOC's headers (default: `6`).
+Makes `md-toc` use headings whose depth is at most the specified value (default: `6`).
 
 <a name="cli"></a>
 ### CLI
@@ -71,23 +67,23 @@ Generates a markdown TOC (table of contents)
 Usage:
   md-toc [OPTIONS] [ARGS]
 
-
 Options:
   -h, --help : Help
   -v, --version : Shows the version number
-  -i, --ignore-first-header : Ignores the first header during the generation of a TOC
-  -m MAXDEPTH, --max-depth=MAXDEPTH : Sets the maximum depth of TOC's headers (default: 6)
+  -m MAXDEPTH, --max-depth=MAXDEPTH : Uses headings whose depth is at most the specified value (default: 6)
 
 Arguments:
   SOURCE : Path to an input markdown file (it must contain the HTML comment <!-- TOC -->) (required)
   TARGET : Path to an output markdown file
 ```
 
+If argument `TARGET` is not specified, a TOC will be added to `SOURCE`.
+
 <a name="example"></a>
 #### Example
 
 ```bash
-$ md-toc path/to/input/markdown path/to/output/markdown --ignore-first-header --max-depth=4
+$ md-toc path/to/input/markdown path/to/output/markdown --max-depth=4
 
-$ md-toc path/to/markdown -i -m 4
+$ md-toc path/to/markdown -m 4
 ```
