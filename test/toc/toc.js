@@ -5,7 +5,7 @@ function readFiles(f) {
     var files = {};
 
     files.md = fs.readFileSync('test/toc/fixtures/md/' + f + '.md', 'utf-8');
-    files['md-toc'] = fs.readFileSync('test/toc/fixtures/md-toc/' + f + '.md', 'utf-8');
+    files['toc-md'] = fs.readFileSync('test/toc/fixtures/toc-md/' + f + '.md', 'utf-8');
 
     return files;
 }
@@ -18,7 +18,7 @@ describe('TOC generation', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['md-toc']);
+                res.must.be.equal(files['toc-md']);
                 done();
             }
         });
@@ -31,7 +31,7 @@ describe('TOC generation', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['md-toc']);
+                res.must.be.equal(files['toc-md']);
                 done();
             }
         });
@@ -44,7 +44,7 @@ describe('TOC generation', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['md-toc']);
+                res.must.be.equal(files['toc-md']);
                 done();
             }
         });
@@ -57,7 +57,7 @@ describe('TOC generation', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['md-toc']);
+                res.must.be.equal(files['toc-md']);
                 done();
             }
         });
@@ -70,7 +70,7 @@ describe('TOC generation', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['md-toc']);
+                res.must.be.equal(files['toc-md']);
                 done();
             }
         });
@@ -83,7 +83,7 @@ describe('TOC generation', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['md-toc']);
+                res.must.be.equal(files['toc-md']);
                 done();
             }
         });
