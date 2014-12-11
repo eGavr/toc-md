@@ -1,6 +1,6 @@
 {
   "name": "toc-md",
-  "version": "0.0.1-alpha2",
+  "version": "0.0.1-alpha3",
   "description": "Generates a markdown TOC (table of contents)",
   "keywords": [
     "readme",
@@ -13,15 +13,15 @@
     "email": "job.egavr@yandex.ru",
     "url": "https://github.com/eGavr"
   },
-  "homepage": "https://github.com/eGavr/md-toc",
+  "homepage": "https://github.com/eGavr/toc-md",
   "repository": {
     "type": "git",
-    "url": "git://github.com/eGavr/md-toc.git"
+    "url": "git://github.com/eGavr/toc-md.git"
   },
-  "bugs": "https://github.com/eGavr/md-toc/issues",
+  "bugs": "https://github.com/eGavr/toc-md/issues",
   "main": "./lib/index.js",
   "bin": {
-    "md-toc": "./bin/md-toc"
+    "toc-md": "./bin/toc-md"
   },
   "dependencies": {
     "marked": "0.3.2",
@@ -50,7 +50,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/egavr/md-toc/blob/master/LICENSE"
+      "url": "https://github.com/egavr/toc-md/blob/master/LICENSE"
     }
   ]
 }
