@@ -24,6 +24,32 @@ describe('TOC generation', function () {
         });
     });
 
+    it('must generate a nested TOC', function (done) {
+        var files = readFiles('nested');
+
+        toc(files.md, function (err, res) {
+            if (err) {
+                done(err);
+            } else {
+                res.must.be.equal(files['toc-md']);
+                done();
+            }
+        });
+    });
+
+    it('must generate a russian TOC', function (done) {
+        var files = readFiles('ru');
+
+        toc(files.md, function (err, res) {
+            if (err) {
+                done(err);
+            } else {
+                res.must.be.equal(files['toc-md']);
+                done();
+            }
+        });
+    });
+
     it('must not generate a TOC', function (done) {
         var files = readFiles('no-toc');
 
