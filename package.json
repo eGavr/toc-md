@@ -28,7 +28,8 @@
     "lodash": "2.4.1",
     "coa": "0.4.1",
     "vow-fs": "0.3.3",
-    "colors": "1.0.3"
+    "colors": "1.0.3",
+    "vow-node": "0.2.1"
   },
   "devDependencies": {
     "mocha": "1.18.2",
