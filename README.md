@@ -4,32 +4,34 @@ Generates a markdown TOC (table of contents).
 
 The tool can be used for English and Russian languages.
 
-## Table of contents
-<!-- TOC -->
-* <a href="#install">Install</a>
-* <a href="#usage">Usage</a>
-  * <a href="#api">API</a>
-    * <a href="#options">Options</a>
-  * <a href="#cli">CLI</a>
-    * <a href="#example">Example</a>
-
-
-<a name="install"></a>
 ## Install
 
 ```bash
 $ npm install toc-md
 ```
 
-<a name="usage"></a>
 ## Usage
 
 Add an HTML comment `<!-- TOC -->` to a markdown file.
 
 A TOC will be generated exactly on this place for the following headers.
 
-<a name="api"></a>
 ### API
+
+```js
+var toc = require('toc-md');
+```
+
+Provides the only function which inserts a TOC to a given source:
+
+**@param** *{String}* - a source where to insert a TOC (must contain the HTML comment `<!-- TOC -->`)<br>
+**@param** *{Object}* - options:<br>
+
+ * **maxDepth: Number** - makes `toc-md` use headings whose depth is at most the specified value (default: `6`)
+
+**@param** *{Function}* - callback
+
+#### Example
 
 ```js
 var fs = require('fs'),
@@ -50,14 +52,6 @@ toc(source, options, function (err, res) {
 });
 ```
 
-<a name="options"></a>
-#### Options
-
-* **maxDepth: Number**
-
-Makes `toc-md` use headings whose depth is at most the specified value (default: `6`).
-
-<a name="cli"></a>
 ### CLI
 
 ```bash
@@ -79,7 +73,6 @@ Arguments:
 
 If argument `TARGET` is not specified, a TOC will be added to `SOURCE`.
 
-<a name="example"></a>
 #### Example
 
 ```bash
