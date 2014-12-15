@@ -50,8 +50,8 @@ describe('TOC generation', function () {
         });
     });
 
-    it('must not generate a TOC', function (done) {
-        var files = readFiles('no-toc');
+    it('must generate a TOC with duplicate headers\' names', function (done) {
+        var files = readFiles('duplicate');
 
         toc(files.md, function (err, res) {
             if (err) {
@@ -63,8 +63,21 @@ describe('TOC generation', function () {
         });
     });
 
-    it('must generate a TOC with duplicate headers\' names', function (done) {
-        var files = readFiles('duplicate');
+    it('must generate a TOC with different headers\' types', function (done) {
+        var files = readFiles('different-types');
+
+        toc(files.md, function (err, res) {
+            if (err) {
+                done(err);
+            } else {
+                res.must.be.equal(files['toc-md']);
+                done();
+            }
+        });
+    });
+
+    it('must not generate a TOC', function (done) {
+        var files = readFiles('no-toc');
 
         toc(files.md, function (err, res) {
             if (err) {
