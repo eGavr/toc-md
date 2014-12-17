@@ -8,11 +8,9 @@
 <!-- TOC ELEMENT -->
 <a name="h1"></a>
 # h1
-
 <!-- TOC ELEMENT -->
 <a name="h2"></a>
 ## h2
-
 <!-- TOC ELEMENT -->
 <a name="h3"></a>
 ### h3
