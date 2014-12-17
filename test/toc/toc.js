@@ -127,4 +127,17 @@ describe('TOC generation', function () {
             }
         });
     });
+
+    it('must handle sources which already contain a TOC', function (done) {
+        var files = readFiles('with-toc');
+
+        toc(files.md, function (err, res) {
+            if (err) {
+                done(err);
+            } else {
+                res.must.be.equal(files['toc-md']);
+                done();
+            }
+        });
+    });
 });
