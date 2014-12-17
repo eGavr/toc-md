@@ -6,6 +6,7 @@
         * <a href="#h">^([#{h$</a>
           * <a href="#h-1">/\\h/\\</a>
           * <a href="#-blah"># blah</a>
+
 <!-- TOC END -->
 
 <!-- TOC ELEMENT -->

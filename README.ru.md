@@ -22,13 +22,18 @@ $ npm install toc-md
 var toc = require('toc-md');
 ```
 
-Предоставляет единственную функцию, которая добавляет оглавление исходному тексту:
+#### toc.insert
 
 **@param** *{String}* - исходный текст, в который необходимо добавить оглавление (обязательно должен содержать HTML-комментарий `<!--TOC-->`)<br>
 **@param** *{Object}* - опции:<br>
 
  * **maxDepth: Number** - `toc-md` будет использовать заголовки, вложенность которых не больше указанного значения (по умолчанию: `6`).
 
+**@param** *{Function}* - callback
+
+#### toc.clean
+
+**@param** *{String}* - исходный текст, который необходимо очистить от оглавления<br>
 **@param** *{Function}* - callback
 
 #### Пример
@@ -43,11 +48,21 @@ var options = {
     maxDepth: 6
 };
 
-toc(source, options, function (err, res) {
+toc.insert(source, options, function (err, res) {
     if (err) {
         console.log(err);
     } else {
         fs.writeFileSync('markdown-с-оглавлением.md', res);
+    }
+});
+
+source = fs.readFileSync('markdown-с-оглавлением.md', 'utf-8');
+
+toc.clean(source, function (err, res) {
+    if (err) {
+        console.log(err);
+    } else {
+        fs.writeFileSync('markdown-без-оглавления.md', res);
     }
 });
 ```
@@ -65,19 +80,29 @@ $ toc-md --help
   -h, --help : Помощь
   -v, --version : Показывает номер версии
   -m MAXDEPTH, --max-depth=MAXDEPTH : Использует заголовки, вложенность которых не больше указанного значения (по умолчанию: 6)
+  -c, --clean : Очищает оглавление
 
 Arguments:
   SOURCE : Путь к входному markdown-файлу (он должен содержать HTML-комментарий <!-- TOC -->) (обязательный аргумент)
   TARGET : Путь к выходному markdown-файлу
 ```
 
-Если аргумент `TARGET` не указан, то содержание будет добавлено в `SOURCE`.
+Если аргумент `TARGET` не указан, то результат будет записан в `SOURCE`.
 
-<a name="пример"></a>
 #### Пример
+
+##### Добавление оглавления
 
 ```bash
 $ toc-md путь/к/входному/markdown-файлу путь/к/выходному/markdown-файлу --max-depth=4
 
 $ toc-md путь/к/markdown-файлу -m 4
+```
+
+##### Очистка оглавления
+
+```bash
+$ toc-md путь/к/входному/markdown-файлу путь/к/выходному/markdown-файлу --clean
+
+$ toc-md путь/к/markdown-файлу -c
 ```

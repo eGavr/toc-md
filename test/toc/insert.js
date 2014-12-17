@@ -1,20 +1,11 @@
-var fs = require('fs'),
+var readFiles = require('./mocks/read'),
     toc = require('../../lib/index');
 
-function readFiles(f) {
-    var files = {};
-
-    files.md = fs.readFileSync('test/toc/fixtures/md/' + f + '.md', 'utf-8');
-    files['toc-md'] = fs.readFileSync('test/toc/fixtures/toc-md/' + f + '.md', 'utf-8');
-
-    return files;
-}
-
-describe('TOC generation', function () {
-    it('must generate a simple TOC', function (done) {
+describe('TOC insert', function () {
+    it('must insert a simple TOC', function (done) {
         var files = readFiles('simple');
 
-        toc(files.md, function (err, res) {
+        toc.insert(files.md, function (err, res) {
             if (err) {
                 done(err);
             } else {
@@ -24,10 +15,10 @@ describe('TOC generation', function () {
         });
     });
 
-    it('must generate a nested TOC', function (done) {
+    it('must insert a nested TOC', function (done) {
         var files = readFiles('nested');
 
-        toc(files.md, function (err, res) {
+        toc.insert(files.md, function (err, res) {
             if (err) {
                 done(err);
             } else {
@@ -37,10 +28,10 @@ describe('TOC generation', function () {
         });
     });
 
-    it('must generate a russian TOC', function (done) {
+    it('must insert a russian TOC', function (done) {
         var files = readFiles('ru');
 
-        toc(files.md, function (err, res) {
+        toc.insert(files.md, function (err, res) {
             if (err) {
                 done(err);
             } else {
@@ -50,10 +41,10 @@ describe('TOC generation', function () {
         });
     });
 
-    it('must generate a TOC with duplicate headers\' names', function (done) {
+    it('must insert a TOC with duplicate headers\' names', function (done) {
         var files = readFiles('duplicate');
 
-        toc(files.md, function (err, res) {
+        toc.insert(files.md, function (err, res) {
             if (err) {
                 done(err);
             } else {
@@ -63,10 +54,10 @@ describe('TOC generation', function () {
         });
     });
 
-    it('must generate a TOC with different headers\' types', function (done) {
+    it('must insert a TOC with different headers\' types', function (done) {
         var files = readFiles('different-types');
 
-        toc(files.md, function (err, res) {
+        toc.insert(files.md, function (err, res) {
             if (err) {
                 done(err);
             } else {
@@ -76,10 +67,10 @@ describe('TOC generation', function () {
         });
     });
 
-    it('must not generate a TOC', function (done) {
+    it('must not insert a TOC', function (done) {
         var files = readFiles('no-toc');
 
-        toc(files.md, function (err, res) {
+        toc.insert(files.md, function (err, res) {
             if (err) {
                 done(err);
             } else {
@@ -92,7 +83,7 @@ describe('TOC generation', function () {
     it('must work \'maxDepth\' option', function (done) {
         var files = readFiles('max-depth');
 
-        toc(files.md, { maxDepth: 3 }, function (err, res) {
+        toc.insert(files.md, { maxDepth: 3 }, function (err, res) {
             if (err) {
                 done(err);
             } else {
@@ -105,7 +96,7 @@ describe('TOC generation', function () {
     it('must handle headers with \'special characters\'', function (done) {
         var files = readFiles('special-characters');
 
-        toc(files.md, function (err, res) {
+        toc.insert(files.md, function (err, res) {
             if (err) {
                 done(err);
             } else {
@@ -118,7 +109,7 @@ describe('TOC generation', function () {
     it('must handle invalid structure of headers', function (done) {
         var files = readFiles('invalid-structure');
 
-        toc(files.md, function (err, res) {
+        toc.insert(files.md, function (err, res) {
             if (err) {
                 done(err);
             } else {
@@ -129,9 +120,9 @@ describe('TOC generation', function () {
     });
 
     it('must handle sources which already contain a TOC', function (done) {
-        var files = readFiles('with-toc');
+        var files = readFiles('nested');
 
-        toc(files.md, function (err, res) {
+        toc.insert(files['toc-md'], function (err, res) {
             if (err) {
                 done(err);
             } else {
