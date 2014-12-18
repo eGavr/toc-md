@@ -41,7 +41,7 @@
   "scripts": {
     "test": "npm run lint && npm run func-test && npm run cover",
     "lint": "jshint . && jscs -c .jscs.js .",
-    "funct-test": "mocha test/toc",
+    "func-test": "mocha test/toc",
     "cover": "istanbul cover _mocha -- test/toc"
   },
   "engines": {
