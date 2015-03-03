@@ -4,6 +4,20 @@ Generates a markdown TOC (table of contents).
 
 The tool can be used for English and Russian languages.
 
+<!-- TOC -->
+- [Install](#install)
+- [Usage](#usage)
+  - [API](#api)
+    - [toc.insert](#tocinsert)
+    - [toc.clean](#tocclean)
+    - [Example](#example)
+  - [CLI](#cli)
+    - [Example](#example-1)
+      - [Insert](#insert)
+      - [Clean](#clean)
+
+<!-- TOC END -->
+
 ## Install
 
 ```bash
