@@ -131,4 +131,30 @@ describe('TOC insert', function () {
             }
         });
     });
+
+    it('must ignore a header', function (done) {
+        var files = readFiles('ignore-header');
+
+        toc.insert(files['toc-md'], function (err, res) {
+            if (err) {
+                done(err);
+            } else {
+                res.must.be.equal(files['toc-md']);
+                done();
+            }
+        });
+    });
+
+    it('must change a displaying of a header', function (done) {
+        var files = readFiles('display-header');
+
+        toc.insert(files['toc-md'], function (err, res) {
+            if (err) {
+                done(err);
+            } else {
+                res.must.be.equal(files['toc-md']);
+                done();
+            }
+        });
+    });
 });
