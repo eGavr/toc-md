@@ -93,6 +93,19 @@ describe('TOC insert', function () {
         });
     });
 
+    it('must work \'bullet\' option', function (done) {
+        var files = readFiles('bullet');
+
+        toc.insert(files['toc-md'], { bullet: '*' }, function (err, res) {
+            if (err) {
+                done(err);
+            } else {
+                res.must.be.equal(files['toc-md']);
+                done();
+            }
+        });
+    });
+
     it('must handle headers with \'special characters\'', function (done) {
         var files = readFiles('special-characters');
 

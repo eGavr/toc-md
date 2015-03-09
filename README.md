@@ -43,7 +43,9 @@ var toc = require('toc-md');
 **@param** *{String}* - a source where to insert a TOC (must contain the HTML comment `<!-- TOC -->`)<br>
 **@param** *{Object}* - options:<br>
 
- * **maxDepth: Number** - makes `toc-md` use headings whose depth is at most the specified value (default: `6`)
+ * **maxDepth: Number** - makes `toc-md` use headings whose depth is at most the specified value (default: `6`).
+
+ * **bullet: Char** - the bullet (`*`, `-`, `+`) to use for each element in the generated TOC (defaults: `-`).
 
 **@param** *{Function}* - callback
 
@@ -96,6 +98,7 @@ Options:
   -h, --help : Help
   -v, --version : Shows the version number
   -m MAXDEPTH, --max-depth=MAXDEPTH : Uses headings whose depth is at most the specified value (default: 6)
+  -b BULLET, --bullet=BULLET : The bullet ('*', '-', '+') to use for each element in the generated TOC (default: '-')
   -c, --clean : Cleans a TOC
 
 Arguments:
@@ -111,9 +114,9 @@ If argument `TARGET` is not specified, a result will be written to `SOURCE`.
 ##### Insert
 
 ```bash
-$ toc-md path/to/input/markdown path/to/output/markdown --max-depth=4
+$ toc-md path/to/input/markdown path/to/output/markdown --max-depth=4 --bullet='*'
 
-$ toc-md path/to/markdown -m 4
+$ toc-md path/to/markdown -m 4 -b '*'
 ```
 
 ##### Clean
