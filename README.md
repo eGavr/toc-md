@@ -12,9 +12,11 @@ The tool can be used for English and Russian languages.
     - [toc.clean](#tocclean)
     - [Example](#example)
   - [CLI](#cli)
-    - [Example](#example-1)
-      - [Insert](#insert)
-      - [Clean](#clean)
+    - [Insert](#insert)
+    - [Clean](#clean)
+- [Advanced TOC](#advanced-toc)
+  - [Ignoring of headers](#ignoring-of-headers)
+  - [Displaying of headers](#displaying-of-headers)
 
 <!-- TOC END -->
 
@@ -103,6 +105,7 @@ Arguments:
 
 If argument `TARGET` is not specified, a result will be written to `SOURCE`.
 
+<!-- TOC:ignore -->
 #### Example
 
 ##### Insert
@@ -120,3 +123,27 @@ $ toc-md path/to/input/markdown path/to/output/markdown --clean
 
 $ toc-md path/to/markdown -c
 ```
+
+## Advanced TOC
+
+### Ignoring of headers
+
+There is an ability to ignore headers in a TOC by adding of the HTML comment<br>`<!-- TOC:ignore -->` before a declaration of a header:
+
+```md
+<!-- TOC:ignore -->
+# ololo
+```
+
+The header `ololo` will not be displayed in a TOC.
+
+### Displaying of headers
+
+There is an ability to change a displaying of a header in a TOC by adding of the HTML comment<br>`<!-- TOC:display:header_text -->` before a declaration of a header:
+
+```md
+<!-- TOC:display:blah -->
+# ololo
+```
+
+The header `ololo` will be displayed in a TOC as `blah`.

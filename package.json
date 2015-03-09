@@ -24,10 +24,11 @@
     "toc-md": "./bin/toc-md"
   },
   "dependencies": {
-    "marked": "0.3.3",
-    "lodash": "3.0.1",
     "coa": "0.4.1",
     "colors": "1.0.3",
+    "inherit": "2.2.2",
+    "lodash": "3.0.1",
+    "marked": "0.3.3",
     "vow-fs": "0.3.4",
     "vow-node": "0.2.1"
   },
