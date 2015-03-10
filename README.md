@@ -45,7 +45,7 @@ var toc = require('toc-md');
 
  * **maxDepth: Number** - makes `toc-md` use headings whose depth is at most the specified value (default: `6`).
 
- * **bullet: Char** - the bullet (`*`, `-`, `+`) to use for each element in the generated TOC (defaults: `-`).
+ * **bullet: Char** - the bullet (`*`, `-`, `+`) to use for each element in the generated TOC (default: `-`).
 
 **@param** *{Function}* - callback
 
