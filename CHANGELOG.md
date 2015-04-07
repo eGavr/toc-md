@@ -4,8 +4,8 @@ History of changes
 0.1.0
 -----
 
-* Added the ability to ignore and replace headers in a TOC (see [#1]).
-* Added option **bullet** (see [#2]).
+* Added the ability to [ignore and replace](https://github.com/eGavr/toc-md#advanced-toc) headers in a TOC.
+* Added option [bullet](https://github.com/eGavr/toc-md#tocinsert).
 
 0.0.3
 -----
@@ -21,6 +21,3 @@ History of changes
 -----
 
 * Initial release.
-
-[#1]: https://github.com/eGavr/toc-md#advanced-toc
-[#2]: https://github.com/eGavr/toc-md#tocinsert
