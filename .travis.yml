@@ -2,12 +2,10 @@ language: node_js
 
 node_js:
   - "0.10"
+  - "0.12"
+  - "4"
 
-env:
-  global:
-    - GH_REF: github.com/eGavr/toc-md.git
-    - ISTANBUL_COVERAGE: true
+script:
+  - npm test --coverage
 
-after_success:
-  - npm i coveralls
-  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && echo "Coverage data was sent to coveralls!"
+after_success: cat ${TRAVIS_BUILD_DIR}/coverage/lcov.info | coveralls
