@@ -40,10 +40,10 @@
     "jscs": "1.10.0"
   },
   "scripts": {
-    "test": "npm run lint && npm run func-test && npm run cover",
+    "test": "npm run lint && npm run coverage",
     "lint": "jshint . && jscs -c .jscs.js .",
-    "func-test": "mocha test/toc",
-    "cover": "istanbul cover _mocha -- test/toc"
+    "unit-test": "mocha test",
+    "coverage": "istanbul cover _mocha -- test"
   },
   "engines": {
     "node": ">=0.8.0",
