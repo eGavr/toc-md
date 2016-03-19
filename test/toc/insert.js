@@ -67,6 +67,19 @@ describe('TOC insert', function () {
         });
     });
 
+    it('must handle html tags in headers', function (done) {
+        var files = readFiles('html-tags');
+
+        toc.insert(files.md, function (err, res) {
+            if (err) {
+                done(err);
+            } else {
+                res.must.be.equal(files['toc-md']);
+                done();
+            }
+        });
+    });
+
     it('must not insert a TOC', function (done) {
         var files = readFiles('no-toc');
 
