@@ -183,4 +183,17 @@ describe('TOC insert', function () {
             }
         });
     });
+
+    it('must handle html anchors before headers', function (done) {
+        var files = readFiles('html-anchors');
+
+        toc.insert(files.md, function (err, res) {
+            if (err) {
+                done(err);
+            } else {
+                res.must.be.equal(files['toc-md']);
+                done();
+            }
+        });
+    });
 });
