@@ -1,4 +1,4 @@
-var readFiles = require('./mocks/read'),
+var readFiles = require('./test-utils').readFiles,
     toc = require('../../lib/index');
 
 describe('TOC insert', function () {
