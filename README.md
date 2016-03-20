@@ -17,6 +17,7 @@ The tool can be used for English and Russian languages.
 - [Advanced TOC](#advanced-toc)
   - [Ignoring of headers](#ignoring-of-headers)
   - [Displaying of headers](#displaying-of-headers)
+  - [Redefinition of anchors](#redefinition-of-anchors)
 
 <!-- TOC END -->
 
@@ -150,3 +151,14 @@ There is an ability to change a displaying of a header in a TOC by adding of the
 ```
 
 The header `ololo` will be displayed in a TOC as `blah`.
+
+### Redefinition of anchors
+
+There is an ability to redefine an anchor which will be generated for a header by adding of the HTML tag `a` with attribute `name` before a declaration of a header:
+
+```md
+<a name="blah"></a>
+# ololo
+```
+
+The header `ololo` will refer to the anchor `blah` in a TOC.
