@@ -1,4 +1,4 @@
-var readFiles = require('./mocks/read'),
+var readFiles = require('./test-utils').readFiles,
     toc = require('../../lib/index');
 
 describe('TOC insert', function () {
@@ -109,7 +109,7 @@ describe('TOC insert', function () {
     it('must work \'bullet\' option', function (done) {
         var files = readFiles('bullet');
 
-        toc.insert(files['toc-md'], { bullet: '*' }, function (err, res) {
+        toc.insert(files.md, { bullet: '*' }, function (err, res) {
             if (err) {
                 done(err);
             } else {
@@ -148,7 +148,7 @@ describe('TOC insert', function () {
     it('must handle sources which already contain a TOC', function (done) {
         var files = readFiles('nested');
 
-        toc.insert(files['toc-md'], function (err, res) {
+        toc.insert(files.md, function (err, res) {
             if (err) {
                 done(err);
             } else {
@@ -161,7 +161,7 @@ describe('TOC insert', function () {
     it('must ignore a header', function (done) {
         var files = readFiles('ignore-header');
 
-        toc.insert(files['toc-md'], function (err, res) {
+        toc.insert(files.md, function (err, res) {
             if (err) {
                 done(err);
             } else {
@@ -174,7 +174,7 @@ describe('TOC insert', function () {
     it('must change a displaying of a header', function (done) {
         var files = readFiles('display-header');
 
-        toc.insert(files['toc-md'], function (err, res) {
+        toc.insert(files.md, function (err, res) {
             if (err) {
                 done(err);
             } else {
