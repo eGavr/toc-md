@@ -27,18 +27,18 @@
     "coa": "0.4.1",
     "colors": "1.0.3",
     "inherit": "2.2.2",
-    "lodash": "3.0.1",
-    "marked": "0.3.3",
+    "lodash": "^4.17.11",
+    "marked": "0.3.12",
     "parse5": "2.1.5",
-    "vow-fs": "0.3.4",
+    "vow-fs": "^0.3.6",
     "vow-node": "0.2.1"
   },
   "devDependencies": {
-    "mocha": "2.1.0",
-    "must": "0.12.0",
-    "istanbul": "0.3.5",
-    "jshint": "2.6.0",
-    "jscs": "1.10.0"
+    "istanbul": "^0.4.5",
+    "jscs": "^3.0.7",
+    "jshint": "^2.9.7",
+    "mocha": "^5.2.0",
+    "must": "0.12.0"
   },
   "scripts": {
     "test": "npm run lint && npm run coverage",

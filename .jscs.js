@@ -45,7 +45,7 @@ module.exports = {
     requireCapitalizedConstructors: true,
     safeContextKeyword: ['_this'],
     disallowYodaConditions: true,
-    validateJSDoc: {
+    jsDoc: {
         checkParamNames: true,
         checkRedundantParams: true,
         requireParamTypes: true
