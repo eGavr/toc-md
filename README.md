@@ -1,4 +1,4 @@
-# toc-md [![Build Status](https://travis-ci.org/eGavr/toc-md.svg)](https://travis-ci.org/eGavr/toc-md) [![Coverage Status](https://img.shields.io/coveralls/eGavr/toc-md.svg)](https://coveralls.io/r/eGavr/toc-md?branch=master) [![Dependency Status](https://david-dm.org/eGavr/toc-md.svg)](https://david-dm.org/eGavr/toc-md) [![devDependency Status](https://david-dm.org/eGavr/toc-md/dev-status.svg)](https://david-dm.org/eGavr/toc-md#info=devDependencies)
+# toc-md-alt
 
 Generates a markdown TOC (table of contents).
 
@@ -21,10 +21,16 @@ The tool can be used for English and Russian languages.
 
 <!-- TOC END -->
 
+## Fork notice
+
+Attempts to communicate with the author via PR and e-mail has resulted in no response, so a fork has been created.
+
+This is a fork of the original `toc-md`, with security updates. node.js 0.x.x support has been removed as a result.
+
 ## Install
 
 ```bash
-$ npm install toc-md
+$ npm install toc-md-alt
 ```
 
 ## Usage
@@ -36,7 +42,7 @@ A TOC will be generated exactly on this place for the following headers.
 ### API
 
 ```js
-var toc = require('toc-md');
+var toc = require('toc-md-alt');
 ```
 
 #### toc.insert
