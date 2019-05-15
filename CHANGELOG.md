@@ -1,6 +1,12 @@
 History of changes
 ==================
 
+0.3.0
+-----
+* Update dependencies so `npm audit` passes
+* Remove `istanbul` (says is no longer maintained, will need alt code-coverage tooling)
+* Use `eslint` instead
+
 0.2.0
 -----
 

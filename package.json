@@ -1,6 +1,6 @@
 {
   "name": "toc-md-alt",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Generates a markdown TOC (table of contents)",
   "keywords": [
     "readme",
@@ -34,26 +34,18 @@
     "vow-node": "0.2.1"
   },
   "devDependencies": {
-    "istanbul": "^0.4.5",
-    "jscs": "^3.0.7",
-    "jshint": "^2.9.7",
+    "eslint": "^5.16.0",
     "mocha": "^5.2.0",
     "must": "0.12.0"
   },
   "scripts": {
-    "test": "npm run lint && npm run coverage",
-    "lint": "jshint . && jscs -c .jscs.js .",
-    "unit-test": "mocha test",
-    "coverage": "istanbul cover _mocha -- test"
+    "test": "npm run lint && npm run unit-test",
+    "lint": "eslint .",
+    "unit-test": "mocha test"
   },
   "engines": {
     "node": ">=0.8.0",
     "npm": ">=1.2.10"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/egavr/toc-md/blob/master/LICENSE"
-    }
-  ]
+  "license": "MIT"
 }

@@ -1,5 +1,9 @@
 # toc-md-alt
 
+This is a fork of `toc-md`. See `CHANGELOG.md` for more details.
+
+---
+
 Generates a markdown TOC (table of contents).
 
 The tool can be used for English and Russian languages.
