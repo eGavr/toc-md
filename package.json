@@ -1,6 +1,6 @@
 {
   "name": "toc-md-alt",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Generates a markdown TOC (table of contents)",
   "keywords": [
     "readme",
@@ -27,7 +27,7 @@
     "coa": "0.4.1",
     "colors": "1.0.3",
     "inherit": "2.2.2",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "marked": "0.3.12",
     "parse5": "2.1.5",
     "vow-fs": "^0.3.6",

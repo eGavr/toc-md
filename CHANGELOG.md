@@ -1,6 +1,11 @@
 History of changes
 ==================
 
+0.3.1
+-----
+
+* Update dependencies so `npm audit` passes
+
 0.3.0
 -----
 * Update dependencies so `npm audit` passes
