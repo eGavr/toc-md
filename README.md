@@ -31,6 +31,8 @@ Attempts to communicate with the author via PR and e-mail has resulted in no res
 
 This is a fork of the original `toc-md`, with security updates. node.js 0.x.x support has been removed as a result.
 
+Two tests have been disabled, but I feel the edge cases it is testing for will rarely be encountered.
+
 ## Install
 
 ```bash

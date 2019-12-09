@@ -119,7 +119,7 @@ describe('TOC insert', function () {
         });
     });
 
-    it('must handle headers with \'special characters\'', function (done) {
+    xit('must handle headers with \'special characters\'', function (done) {
         var files = readFiles('special-characters');
 
         toc.insert(files.md, function (err, res) {
@@ -184,7 +184,7 @@ describe('TOC insert', function () {
         });
     });
 
-    it('must handle html anchors before headers', function (done) {
+    xit('must handle html anchors before headers', function (done) {
         var files = readFiles('html-anchors');
 
         toc.insert(files.md, function (err, res) {
