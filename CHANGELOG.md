@@ -1,6 +1,13 @@
 History of changes
 ==================
 
+0.3.3
+-----
+
+* Consistently space the opening and closing comments (https://github.com/theogravity/toc-md/pull/9) (@chocolateboy)
+* Update readme, links (https://github.com/theogravity/toc-md/pull/7), (https://github.com/theogravity/toc-md/pull/8) (@chocolateboy)
+* Update packages to latest versions
+
 0.3.1
 -----
 
