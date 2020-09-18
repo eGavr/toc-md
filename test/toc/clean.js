@@ -1,3 +1,5 @@
+var assert = require('assert');
+
 var readFiles = require('./test-utils').readFiles,
     toc = require('../../lib/index');
 
@@ -9,7 +11,7 @@ describe('TOC clean', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files.md);
+                assert.equal(res, files.md);
                 done();
             }
         });
@@ -22,7 +24,7 @@ describe('TOC clean', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files.md);
+                assert.equal(res, files.md);
                 done();
             }
         });

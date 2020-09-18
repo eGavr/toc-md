@@ -1,3 +1,5 @@
+var assert = require('assert');
+
 var readFiles = require('./test-utils').readFiles,
     toc = require('../../lib/index');
 
@@ -9,7 +11,7 @@ describe('TOC insert', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['toc-md']);
+                assert.equal(res, files['toc-md']);
                 done();
             }
         });
@@ -22,7 +24,7 @@ describe('TOC insert', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['toc-md']);
+                assert.equal(res, files['toc-md']);
                 done();
             }
         });
@@ -35,7 +37,7 @@ describe('TOC insert', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['toc-md']);
+                assert.equal(res, files['toc-md']);
                 done();
             }
         });
@@ -48,7 +50,7 @@ describe('TOC insert', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['toc-md']);
+                assert.equal(res, files['toc-md']);
                 done();
             }
         });
@@ -61,7 +63,7 @@ describe('TOC insert', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['toc-md']);
+                assert.equal(res, files['toc-md']);
                 done();
             }
         });
@@ -74,7 +76,7 @@ describe('TOC insert', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['toc-md']);
+                assert.equal(res, files['toc-md']);
                 done();
             }
         });
@@ -87,7 +89,7 @@ describe('TOC insert', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['toc-md']);
+                assert.equal(res, files['toc-md']);
                 done();
             }
         });
@@ -100,7 +102,7 @@ describe('TOC insert', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['toc-md']);
+                assert.equal(res, files['toc-md']);
                 done();
             }
         });
@@ -113,7 +115,7 @@ describe('TOC insert', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['toc-md']);
+                assert.equal(res, files['toc-md']);
                 done();
             }
         });
@@ -126,7 +128,7 @@ describe('TOC insert', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['toc-md']);
+                assert.equal(res, files['toc-md']);
                 done();
             }
         });
@@ -139,7 +141,7 @@ describe('TOC insert', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['toc-md']);
+                assert.equal(res, files['toc-md']);
                 done();
             }
         });
@@ -152,7 +154,7 @@ describe('TOC insert', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['toc-md']);
+                assert.equal(res, files['toc-md']);
                 done();
             }
         });
@@ -165,7 +167,7 @@ describe('TOC insert', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['toc-md']);
+                assert.equal(res, files['toc-md']);
                 done();
             }
         });
@@ -178,7 +180,7 @@ describe('TOC insert', function () {
             if (err) {
                 done(err);
             } else {
-                res.must.be.equal(files['toc-md']);
+                assert.equal(res, files['toc-md']);
                 done();
             }
         });
