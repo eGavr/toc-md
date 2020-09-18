@@ -1,7 +1,7 @@
 History of changes
 ==================
 
-0.3.3
+0.4.0
 -----
 
 * Consistently space the opening and closing comments (https://github.com/theogravity/toc-md/pull/9) (@chocolateboy)
