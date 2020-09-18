@@ -13,12 +13,12 @@
     "email": "job.egavr@yandex.ru",
     "url": "https://github.com/eGavr"
   },
-  "homepage": "https://github.com/eGavr/toc-md",
+  "homepage": "https://github.com/theogravity/toc-md",
   "repository": {
     "type": "git",
-    "url": "git://github.com/eGavr/toc-md.git"
+    "url": "git://github.com/theogravity/toc-md.git"
   },
-  "bugs": "https://github.com/eGavr/toc-md/issues",
+  "bugs": "https://github.com/theogravity/toc-md/issues",
   "main": "./lib/index.js",
   "bin": {
     "toc-md": "./bin/toc-md"
