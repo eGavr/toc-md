@@ -45,6 +45,8 @@ Add an HTML comment `<!-- TOC -->` to a markdown file.
 
 A TOC will be generated exactly on this place for the following headers.
 
+To migrate from an existing TOC generator with start and end markers, replace them with `<!-- TOC -->` and `<!-- TOC END -->`.
+
 ### API
 
 ```js
