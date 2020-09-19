@@ -34,14 +34,25 @@
     "vow-node": "0.3.0"
   },
   "devDependencies": {
+    "@theo.gravity/changelog-version": "^2.1.10",
+    "@theo.gravity/version-bump": "^2.0.10",
     "eslint": "^7.9.0",
     "mocha": "^8.1.3",
     "must": "0.13.4"
   },
   "scripts": {
+    "build": "exit 0",
     "test": "npm run lint && npm run unit-test",
+    "test:ci": "npm run lint && npm run unit-test",
     "lint": "eslint .",
-    "unit-test": "mocha \"test/**/*.js\""
+    "unit-test": "mocha \"test/**/*.js\"",
+    "prepare-publish": "npm run changelog:prepare && version-bump && npm run changelog:release && npm run changelog:stamp",
+    "version-bump": "version-bump",
+    "changelog:help": "changelog-version",
+    "changelog:verify": "changelog-version verify",
+    "changelog:prepare": "changelog-version prepare",
+    "changelog:stamp": "git-commit-stamper parse CHANGELOG.md",
+    "changelog:release": "changelog-version release"
   },
   "engines": {
     "node": ">=0.8.0",
