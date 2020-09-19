@@ -1,5 +1,7 @@
 # toc-md-alt
 
+[![CircleCI](https://circleci.com/gh/theogravity/toc-md.svg?style=svg)](https://circleci.com/gh/theogravity/toc-md)
+
 This is a fork of `toc-md`. See `CHANGELOG.md` for more details.
 
 ---
