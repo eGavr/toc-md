@@ -1,3 +1,9 @@
+## 0.4.1 - Sat Sep 19 2020 19:26:27
+
+**Contributor:** Theo Gravity
+
+- Add CI support
+
 0.4.0
 -----
 
