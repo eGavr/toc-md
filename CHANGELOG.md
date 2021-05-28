@@ -1,3 +1,11 @@
+## 0.4.2 - Fri May 28 2021 19:24:44
+
+**Contributor:** chocolateboy
+
+- Bump dependencies (#11)
+
++ unpin versions
+
 ## 0.4.1 - Sat Sep 19 2020 19:26:27
 
 **Contributor:** Theo Gravity
